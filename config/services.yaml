@@ -1,0 +1,19 @@
+services:
+  api:
+    enabled: true
+    port: 8080
+    timeout: 30s
+
+  cache:
+    enabled: true
+    type: redis
+    ttl: 3600
+
+  queue:
+    enabled: false
+    provider: rabbitmq
+    workers: 4
+
+healthcheck:
+  interval: 30s
+  endpoint: /health
