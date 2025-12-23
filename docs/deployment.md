@@ -2,9 +2,20 @@
 
 ## Prerequisites
 
-- Docker installed
+- Docker 20.10+ installed
 - Access to production environment
 - Valid credentials
+
+## Environment Variables
+
+The following environment variables must be set before deployment:
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `DATABASE_URL` | PostgreSQL connection string | Yes |
+| `API_SECRET_KEY` | Secret key for JWT signing | Yes |
+| `REDIS_URL` | Redis connection string | Yes |
+| `LOG_LEVEL` | Logging level (info, warn, error) | No |
 
 ## Deployment Steps
 
